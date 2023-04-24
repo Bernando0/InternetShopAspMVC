@@ -1,0 +1,30 @@
+﻿@model CategoryViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <form asp-action="Create">
+        <div class="form-group">
+            <h2>@ViewData["Title"]</h2>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-8 row">
+                   <input asp-for="Name" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col">
+                <input type="submit" value="Add" class="btn btn-success" />
+            </div>
+            <div class="col">
+                <input asp-action="Index" value="Back" class="btn btn-primary" type="submit" />
+            </div>
+        </div>
+    </form>
+</div>
+
